@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mainHeading"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:padding="32dp"
+        android:textSize="36sp"
+    />
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q.1 What is capital city of Himachal PradesH?"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:padding="16dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quiz"
+        android:padding="8dp"
+        android:orientation="vertical">
+        <RadioGroup
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            style="@style/checkbox"
+            android:id="@+id/question1"
+            android:paddingStart="16dp"
+            android:text="Shimla" />
+        <RadioButton
+            style="@style/checkbox"
+            android:id="@+id/question2"
+            android:text="Mandi" />
+        <RadioButton
+            style="@style/checkbox"
+            android:id="@+id/question3"
+            android:text="Kangra" />
+        <RadioButton
+            style="@style/checkbox"
+            android:id="@+id/question4"
+            android:text="Solan" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+        <Button
+            style="@style/buttons"
+            android:id="@+id/btnPrevious"
+            android:text="Pre"/>
+        <Button
+            style="@style/buttons"
+            android:id="@+id/btnSubmit"
+            android:text="Submit"
+            />
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/buttons"
+            android:text="Next"
+            />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
