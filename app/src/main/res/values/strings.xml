@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">Himachalgkquiz</string>
+    <string name="app_name">Himachal GK</string>
     <string name="mainHeading">Himachal GK QUIZ</string>
+    <string name="pre">Pre</string>
+    <string name="Submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="correct">Well done! Correct answer</string>
+    <string name="incorrect">Sorry! Incorrect answer! Try Again.</string>
+    <string name="correctAnswer">Correct Answers</string>
+    <string name="reset">Restart Quiz</string>
 </resources>

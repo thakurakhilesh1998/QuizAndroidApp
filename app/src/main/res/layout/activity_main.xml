@@ -1,26 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/mainHeading"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:padding="32dp"
-        android:textSize="36sp"
-    />
+        android:padding="@dimen/mainheadingpaddong"
+        android:textSize="@dimen/mainText"
+        />
+        <LinearLayout
+            android:id="@+id/resultparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/subPadding"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/mainpadding"
+            android:background="@color/option"
+            android:padding="@dimen/mainpadding"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/correctAnswer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mainText"
+                android:padding="@dimen/mainpadding"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tvPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/subPadding"
+                android:text="60%"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mainText"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Good"
+                android:textSize="@dimen/mainText"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/mainpadding"
+                />
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_marginTop="@dimen/mainpadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textAppearance="@android:style/TextAppearance.Medium"/>
+        </LinearLayout>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/quizlayout"
+    >
+
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="match_parent"
@@ -29,22 +87,22 @@
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:padding="16dp"
+        android:padding="@dimen/mainpadding"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/quiz"
-        android:padding="8dp"
+        android:padding="@dimen/subPadding"
         android:orientation="vertical">
         <RadioGroup
+            android:id="@+id/rgOptions"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatRadioButton
+        <RadioButton
             style="@style/checkbox"
             android:id="@+id/question1"
-            android:paddingStart="16dp"
             android:text="Shimla" />
         <RadioButton
             style="@style/checkbox"
@@ -59,26 +117,39 @@
             android:id="@+id/question4"
             android:text="Solan" />
         </RadioGroup>
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/option"
+            android:text="Incorrect  Answer"
+            android:visibility="gone"
+            android:textSize="@dimen/error"
+            />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/mainpadding"
         android:orientation="horizontal">
         <Button
             style="@style/buttons"
             android:id="@+id/btnPrevious"
-            android:text="Pre"/>
+            android:text="@string/pre"/>
         <Button
             style="@style/buttons"
             android:id="@+id/btnSubmit"
-            android:text="Submit"
+            android:text="@string/Submit"
             />
         <Button
             android:id="@+id/btnNext"
             style="@style/buttons"
-            android:text="Next"
+            android:text="@string/next"
             />
     </LinearLayout>
 </LinearLayout>
+    </LinearLayout>
 </ScrollView>
