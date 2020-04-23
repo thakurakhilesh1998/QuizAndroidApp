@@ -8,4 +8,5 @@
     <string name="incorrect">Sorry! Incorrect answer! Try Again.</string>
     <string name="correctAnswer">Correct Answers</string>
     <string name="reset">Restart Quiz</string>
+    <string name="moreans">( Your can enter more than one answer )</string>
 </resources>

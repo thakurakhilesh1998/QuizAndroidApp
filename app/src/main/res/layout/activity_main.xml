@@ -7,20 +7,22 @@
     android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- Main Linear Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/colorPrimary">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mainHeading"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:padding="@dimen/mainheadingpaddong"
-        android:textSize="@dimen/mainText"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mainHeading"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:padding="@dimen/mainheadingpaddong"
+            android:textSize="@dimen/mainText" />
+        <!-- Start of the Result Layout-->
         <LinearLayout
             android:id="@+id/resultparent"
             android:layout_width="match_parent"
@@ -70,86 +72,153 @@
                 android:textColor="@color/white"
                 android:textAppearance="@android:style/TextAppearance.Medium"/>
         </LinearLayout>
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:visibility="gone"
-    android:id="@+id/quizlayout"
-    >
 
-    <TextView
-        android:id="@+id/tvQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q.1 What is capital city of Himachal PradesH?"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.Large"
-        android:padding="@dimen/mainpadding"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/quiz"
-        android:padding="@dimen/subPadding"
-        android:orientation="vertical">
-        <RadioGroup
-            android:id="@+id/rgOptions"
-            android:layout_height="wrap_content"
+        <!-- Start of the Question Layout -->
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:orientation="vertical">
-        <RadioButton
-            style="@style/checkbox"
-            android:id="@+id/question1"
-            android:text="Shimla" />
-        <RadioButton
-            style="@style/checkbox"
-            android:id="@+id/question2"
-            android:text="Mandi" />
-        <RadioButton
-            style="@style/checkbox"
-            android:id="@+id/question3"
-            android:text="Kangra" />
-        <RadioButton
-            style="@style/checkbox"
-            android:id="@+id/question4"
-            android:text="Solan" />
-        </RadioGroup>
-        <TextView
-            android:id="@+id/tvError"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/option"
-            android:text="Incorrect  Answer"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:visibility="gone"
-            android:textSize="@dimen/error"
+            android:id="@+id/quizlayout"
+            >
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q.1 What is capital city of Himachal PradesH?"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:padding="@dimen/mainpadding"
             />
+
+            <!-- Start of the Radio Button quiz -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quiz"
+                android:padding="@dimen/subPadding"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <RadioGroup
+                    android:id="@+id/rgOptions"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <RadioButton
+                        style="@style/checkbox"
+                        android:id="@+id/question1"
+                         />
+                    <RadioButton
+                        style="@style/checkbox"
+                        android:id="@+id/question2"
+                         />
+                    <RadioButton
+                        style="@style/checkbox"
+                        android:id="@+id/question3"
+                         />
+                    <RadioButton
+                        style="@style/checkbox"
+                        android:id="@+id/question4"
+                        />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <!-- Start of the checkbox Quiz -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/subPadding"
+                android:id="@+id/checkBox"
+                android:visibility="gone"
+                >
+                <CheckBox
+                    style="@style/checkbox"
+                    android:id="@+id/cbOption1"
+                    android:text="Option 1"
+                    android:textColor="@color/white"
+                    />
+                <CheckBox
+                    style="@style/checkbox"
+                    android:id="@+id/cbOption2"
+                    android:text="Option 1"
+                    android:textColor="@color/white"
+                    />
+                <CheckBox
+                    style="@style/checkbox"
+                    android:id="@+id/cbOption3"
+                    android:text="Option 1"
+                    android:textColor="@color/white"
+                    />
+                <CheckBox
+                    style="@style/checkbox"
+                    android:id="@+id/cbOption4"
+                    android:text="Option 1"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+
+            <!-- Start of the Free Text Quiz -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/subPadding"
+                android:visibility="gone"
+                android:id="@+id/textBox">
+                <EditText
+                    android:id="@+id/etResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/option"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/subPadding"
+                    android:hint="Enter Your Response"/>
+            </LinearLayout>
+
+            <!-- Error Text -->
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_margin="@dimen/mainpadding"
+                android:background="@color/option"
+                android:visibility="gone"
+                android:textSize="@dimen/error"
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/mainpadding"
+                    android:orientation="horizontal">
+                    <Button
+                        style="@style/buttons"
+                        android:id="@+id/btnPrevious"
+                        android:text="@string/pre"/>
+                    <Button
+                        style="@style/buttons"
+                        android:id="@+id/btnSubmit"
+                        android:text="@string/Submit"
+                        />
+                    <Button
+                        android:id="@+id/btnNext"
+                        style="@style/buttons"
+                        android:text="@string/next"
+                        />
+                </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/mainpadding"
-        android:orientation="horizontal">
-        <Button
-            style="@style/buttons"
-            android:id="@+id/btnPrevious"
-            android:text="@string/pre"/>
-        <Button
-            style="@style/buttons"
-            android:id="@+id/btnSubmit"
-            android:text="@string/Submit"
-            />
-        <Button
-            android:id="@+id/btnNext"
-            style="@style/buttons"
-            android:text="@string/next"
-            />
-    </LinearLayout>
-</LinearLayout>
-    </LinearLayout>
 </ScrollView>
